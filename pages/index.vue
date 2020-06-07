@@ -383,8 +383,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import axios from "axios";
-import env from "@/env.json";
-
 
 export default Vue.extend({
   head () {
@@ -403,7 +401,7 @@ export default Vue.extend({
   methods: {
     async ceklogin(){
       let token = localStorage.getItem('token')
-      await axios.get( env.base_url_api + '/token/me', {
+      await axios.get( process.env.baseUrlApi + '/token/me', {
         headers:{
           'Authorization': 'Bearer ' + token
         }

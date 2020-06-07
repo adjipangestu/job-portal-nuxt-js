@@ -69,6 +69,11 @@ export default {
   modules: [
   ],
 
+  env: {
+    baseUrl: 'http://167.99.31.37:3000',
+    baseUrlApi: 'http://167.99.31.37:8000'
+  },
+
   /*
   ** Build configuration
   */
